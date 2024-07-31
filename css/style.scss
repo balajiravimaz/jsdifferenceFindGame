@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #2e2e32;
+    color: #fff;
+    overflow-x: hidden;
+}
+.container {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    .imageContainer{
+        width: 50%;
+        margin: 0 auto;
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+.visited {
+    pointer-events: none;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.count {
+    width: 150px;
+    background: #fee600;
+    padding: 10px;
+    color: #000;
+    margin-top: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.diffText {
+    margin-top: 10px;
+}
+.popup {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    top: 0;
+    display: none;
+    z-index: 11;
+    .wrap {
+        width: 550px;
+        height: 200px;
+        background-color: #efefef;
+        padding: 30px;
+        color: #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+        #popClose{
+            position: absolute;
+            top: -25px;
+            right: -20px;
+            background: transparent;
+            border: 0;
+            outline: none;
+            font-size: 26px;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+}
+#close {
+    position: absolute;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    right: -20px;
+    top: -30px;
+    width: 25px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 25px;
+    background: transparent;
+    border: none;
+}
+#timer-container {
+    margin-top: 20px;
+    display: inline-block;
+    width: 150px;
+    border: 1px solid #fff;
+    padding: 10px;
+    position: absolute;
+    top: 10%;
+    left: 45px;
+}
+#score-container {
+    margin-top: 20px;
+    display: inline-block;
+    width: 150px;
+    border: 1px solid #fff;
+    padding: 10px;
+    position: absolute;
+    top: 10%;
+    right: 45px;
+}
+#time,
+#score {
+    padding-top: 5px;
+    color: #fee600;
+    font-weight: bold;
+    font-size: 16px;
+}
+#quizPopup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    #feedback {
+        h2 {
+            font-size: 16px;
+            margin-top: 15px;
+            text-align: center;
+            &.correct {
+                color: green;
+            }
+            &.incorrect {
+                color: red;
+            }
+        }
+    }
+    .wrap {
+        width: 700px;
+        background: #efefef;
+        position: relative;
+        height: 375px;
+        text-align: left;
+        color: #2e2e32;
+        padding: 20px 30px;
+        #close {
+            position: absolute;
+            top: -25px;
+            right: -25px;
+            background-color: transparent;
+            outline: none;
+            color: #000;
+            border: none;
+            color: #fff;
+            display: none;
+            font-size: 25px;
+            cursor: pointer;
+            /* background: #000; */
+            /* color: #000; */
+        }
+        .question {
+            padding-bottom: 15px;
+        }
+        input[type="radio"] {
+            width: 20px;
+        }
+        .option {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 10px;
+            justify-content: flex-start;
+            align-items: center;
+            cursor: pointer;
+            .optionbtn {
+                margin-bottom: 10px;
+                /* width: 20px; */
+                display: inline-block;
+                margin-top: auto;
+                height: 15px;
+                width: 15px;
+                margin-top: 8px;
+            }
+        }
+        #submit {
+            display: inline-block;
+            padding: 8px 15px;
+            background: #2e2e32;
+            color: #fff;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 0 15px;
+            &:hover {
+                background: #fee600;
+                color: #000;
+            }
+            &:disabled {
+                opacity: 0.2;
+                pointer-events: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difference Checker Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="imageContainer">
+            <img src="images/difference.jpg" id="myImage" border="0" usemap="#map" />
+
+            <map name="map">
+                <area shape="rect" class="area-1" data-shape="rect-1" coords="629,22,667,97" nohref="1.com" />
+                <area shape="rect" class="area-1" data-shape="rect-1" coords="268,31,301,97" nohref="1.com" />
+                <area shape="rect" class="area-2" data-shape="rect-2" coords="297,133,309,145" nohref="2.com" />
+                <area shape="rect" class="area-2" data-shape="rect-2" coords="663,131,674,142" nohref="2.com" />
+                <area shape="rect" class="area-3" data-shape="rect-3" coords="39,54,65,77" nohref="3.com" />
+                <area shape="rect" class="area-3" data-shape="rect-3" coords="400,62,426,78" nohref="3.com" />
+                <area shape="rect" class="area-4" data-shape="rect-4" coords="231,258,269,300" nonohref="4.com" />
+                <area shape="rect" class="area-4" data-shape="rect-4" coords="587,259,652,319" nohref="4.com" />
+
+                <area shape="poly" class="area-5" data-shape="poly-1"
+                    coords="266,378,276,377,280,374,281,370,286,370,282,365,279,363,274,364,274,369,271,369,265,370,266,368,267,368,266,380,266,374,270,374,267,375"
+                    nohref="5.com" />
+                <area shape="poly" class="area-5" data-shape="poly-1"
+                    coords="627,376,638,376,644,371,647,367,643,364,638,365,630,369,628,372,632,372,633,374"
+                    nohref="5.com" />
+                <area shape="poly" class="area-6" data-shape="poly-2"
+                    coords="97,413,113,423,120,425,123,428,126,433,126,438,132,440,138,441,142,436,138,436,130,433,128,426,125,423,125,418,116,417,104,408,100,408,98,410"
+                    nonohref="nonohref" />
+                <area shape="poly" class="area-6" data-shape="poly-2"
+                    coords="458,411,466,422,473,424,486,429,498,433,498,434,500,439,506,436,496,427,493,421,483,420,471,415,462,412,458,407,455,407,457,411,460,412"
+                    nohref="6.com" />
+            </map>
+        </div>
+        <p class="diffText">Find the 6 Differences in above picture</p>
+        <div class="flex">
+            <div class="count">
+                <p id="countTotal">6</p>
+                <p class="countText">Left</p>
+            </div>
+        </div>
+        <div class="popup">
+        </div>
+        <div id="quizPopup">
+        </div>
+        <div id="timer-container">
+            <p>Time:</p>
+            <p id="time"></p>
+        </div>
+        <div id="score-container">
+            <p>Score:</p>
+            <p id="score">0</p>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
